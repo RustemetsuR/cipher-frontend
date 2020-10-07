@@ -1,13 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import thunkMiddleware from 'redux-thunk';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import cipherReducer from './store/reducers/cipherReducer';
 
-ReactDOM.render(
-  <React.StrictMode>
+
+const store = createStore(cipherReducer, applyMiddleware(thunkMiddleware));
+
+
+const app = (
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>
+)
+ReactDOM.render(
+  app,
   document.getElementById('root')
 );
 

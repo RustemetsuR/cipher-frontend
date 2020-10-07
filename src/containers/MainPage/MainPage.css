@@ -1,0 +1,21 @@
+.inputs-cipher{
+    width: 50%;
+    margin: 25px auto;
+    height: 200px;
+    padding: 10px;
+}
+.buttons-box{
+    text-align: start;
+    width: 50%;
+    margin: 0 auto;
+}
+.password-inp{
+    width: 50%;
+    display: inline-block;
+    
+}
+
+.buttons-box button{
+    width: 20%;
+    margin: 0 5px;
+}
